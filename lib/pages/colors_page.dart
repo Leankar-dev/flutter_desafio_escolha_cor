@@ -12,31 +12,58 @@ class ColorsPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple.shade100,
       ),
-      body: Row(
-        mainAxisAlignment: .center,
-        children: [
-          Column(
-            mainAxisAlignment: .center,
-            children: [
-              CustomContainerButton(color: Colors.red, onTap: () {}),
-              const SizedBox(height: 16),
-              CustomContainerButton(color: Colors.green, onTap: () {}),
-              const SizedBox(height: 16),
-              CustomContainerButton(color: Colors.orange, onTap: () {}),
-            ],
-          ),
-          const SizedBox(width: 32),
-          Column(
-            mainAxisAlignment: .center,
-            children: [
-              CustomContainerButton(color: Colors.blue, onTap: () {}),
-              const SizedBox(height: 16),
-              CustomContainerButton(color: Colors.yellow, onTap: () {}),
-              const SizedBox(height: 16),
-              CustomContainerButton(color: Colors.purple, onTap: () {}),
-            ],
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          mainAxisAlignment: .center,
+          children: [
+            Column(
+              mainAxisAlignment: .center,
+              children: [
+                CustomContainerButton(
+                  color: Colors.red,
+                  onTap: () {},
+                  text: 'Red',
+                ),
+                const SizedBox(height: 16),
+                CustomContainerButton(
+                  color: Colors.green,
+                  onTap: () {},
+                  text: 'Green',
+                ),
+                const SizedBox(height: 16),
+                CustomContainerButton(
+                  color: Colors.orange,
+                  onTap: () {},
+                  text: 'Orange',
+                ),
+              ],
+            ),
+            const SizedBox(width: 32),
+            Column(
+              mainAxisAlignment: .center,
+              children: [
+                CustomContainerButton(
+                  color: Colors.blue,
+                  onTap: () {},
+                  text: 'Blue',
+                ),
+                const SizedBox(height: 16),
+                CustomContainerButton(
+                  color: Colors.yellow,
+                  onTap: () {},
+                  text: 'Yellow',
+                ),
+                const SizedBox(height: 16),
+                CustomContainerButton(
+                  color: Colors.purple,
+                  onTap: () {},
+                  text: 'Purple',
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

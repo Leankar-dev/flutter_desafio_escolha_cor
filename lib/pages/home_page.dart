@@ -12,11 +12,9 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _navigateAndPickColor() async {
     final selectedColor = await Navigator.of(context).pushNamed('/colors');
-    if (selectedColor is Color) {
-      setState(() {
-        _backgroundColor = selectedColor;
-      });
-    }
+    setState(() {
+      _backgroundColor = selectedColor is Color ? selectedColor : Colors.white;
+    });
   }
 
   @override

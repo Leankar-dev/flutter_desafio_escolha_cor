@@ -22,19 +22,19 @@ class ColorsPage extends StatelessWidget {
               children: [
                 CustomContainerButton(
                   color: Colors.red,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.red),
                   text: 'Red',
                 ),
                 const SizedBox(height: 16),
                 CustomContainerButton(
                   color: Colors.green,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.green),
                   text: 'Green',
                 ),
                 const SizedBox(height: 16),
                 CustomContainerButton(
                   color: Colors.orange,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.orange),
                   text: 'Orange',
                 ),
               ],
@@ -45,19 +45,19 @@ class ColorsPage extends StatelessWidget {
               children: [
                 CustomContainerButton(
                   color: Colors.blue,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.blue),
                   text: 'Blue',
                 ),
                 const SizedBox(height: 16),
                 CustomContainerButton(
                   color: Colors.yellow,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.yellow),
                   text: 'Yellow',
                 ),
                 const SizedBox(height: 16),
                 CustomContainerButton(
                   color: Colors.purple,
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).pop(Colors.purple),
                   text: 'Purple',
                 ),
               ],

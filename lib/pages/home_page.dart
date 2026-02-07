@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Color _backgroundColor = Colors.white;
+
+  Future<void> _navigateAndPickColor() async {
+    final selectedColor = await Navigator.of(context).pushNamed('/colors');
+    if (selectedColor is Color) {
+      setState(() {
+        _backgroundColor = selectedColor;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +31,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.purple.shade100,
       ),
       body: Container(
-        color: Colors.white,
+        color: _backgroundColor,
         child: Center(
           child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/colors');
-            },
+            onPressed: _navigateAndPickColor,
             child: const Text('Selecionar a Cor Perfeita'),
           ),
         ),
